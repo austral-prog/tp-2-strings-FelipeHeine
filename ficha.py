@@ -29,33 +29,29 @@ def ficha():
     #   - Cierre decorativo usando repetición de string ("=" * 24)
 
 
-    nombre = input("Nombre completo: ")
+    nombre = input("Nombre completo:").strip().lower()
     email = input("ingresa Mail: ")
     nota = int(input("ingresa nota 1: "))
     nota2 = int(input("ingresa nota 2: "))
     nota3 = int(input("ingresa nota 3: "))
-    decorado = """
-    ========================
+    print( """========================
     FICHA DEL ALUMNO
-    ========================
-    
-    """
-    print(decorado)
+========================""")
     print("Nombre: " + str(nombre.title()))
     print("Email: " + str(email.lower()))
     print("Caracteres en nombre: " + str(len(nombre)))
     print("Iniciales:", f"{nombre[0].upper()}{nombre[nombre.find(" ")+1].upper()}", )
     print("Usuario:", f"{(nombre[nombre.find(" ")+1:]).lower()}.{(nombre[0:nombre.find(" ")]).lower()}")
-    print("email valida: " , str("@" in email))
+    print("Email valido:" , str("@" in email))
     print("Dominio: " + f"{email[email.find("@")+1:].lower()}")
-    print("Nombre para archivo: " + str(nombre.replace(" ","_")))
-    print("count: " + str(nombre.count("a")))
-    print("codigo secreto: " + str(nombre[::-1].upper()))
+    print("Nombre para archivo: " + str(nombre.replace(" ","_").title()))
+    print("Cantidad de a: " + str(nombre.count("a")))
+    print("Codigo secreto: " + str(nombre[::-1].upper()))
     print("Nota 1: " + str(nota))
     print("Nota 2: " + str(nota2))
     print("Nota 3: " + str(nota3))
     print("Suma: " + str(nota + nota2 + nota3))
-    print("Promedio: " + str(nota + nota2 + nota3 /3))
-    print("Promedio entero: " + str(round(nota + nota2 + nota3 /3)))
+    print("Promedio: " + str((nota + nota2 + nota3)/3))
+    print("Promedio entero: " + str(round((nota + nota2 + nota3) /3)))
     cierre = "=" * 24
     print(cierre)
