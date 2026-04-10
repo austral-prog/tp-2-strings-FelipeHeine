@@ -12,4 +12,4 @@ def rectangle():
     print("Altura: " + str(altura))
     print("Area: " + str(area))
     print("Perimetro: " + str(perimetro))
-
+rectangle()

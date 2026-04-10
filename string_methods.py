@@ -28,3 +28,4 @@ Linea 3"""
     print("Reverso: " + str("Python"[::-1]))
     print("Formato: " + (str(nombre).strip() + " " + "sabe " + str(frase[0:6])))
     print(multilinea)
+string_methods()
