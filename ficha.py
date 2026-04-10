@@ -1,3 +1,6 @@
+from http.cookiejar import uppercase_escaped_char
+
+
 def ficha():
     """Ejercicio integrador. Lee nombre, email y 3 notas, y genera una ficha
     de alumno aplicando: strip, title, lower, upper, int, len, find, slicing,
@@ -24,4 +27,35 @@ def ficha():
     #   - Código secreto: nombre invertido en mayúsculas
     #   - Las 3 notas, su suma, promedio y promedio entero
     #   - Cierre decorativo usando repetición de string ("=" * 24)
-    pass
+
+
+    nombre = input("Nombre completo: ")
+    email = input("ingresa Mail: ")
+    nota = int(input("ingresa nota 1: "))
+    nota2 = int(input("ingresa nota 2: "))
+    nota3 = int(input("ingresa nota 3: "))
+    decorado = """
+    ========================
+    FICHA DEL ALUMNO
+    ========================
+    
+    """
+    print(decorado)
+    print("Nombre: " + str(nombre.title()))
+    print("Email: " + str(email.lower()))
+    print("Caracteres en nombre: " + str(len(nombre)))
+    print("Iniciales:", f"{nombre[0].upper()}{nombre[nombre.find(" ")+1].upper()}", )
+    print("Usuario:", f"{(nombre[nombre.find(" ")+1:]).lower()}.{(nombre[0:nombre.find(" ")]).lower()}")
+    print("email valida: " , str("@" in email))
+    print("Dominio: " + f"{email[email.find("@")+1:].lower()}")
+    print("Nombre para archivo: " + str(nombre.replace(" ","_")))
+    print("count: " + str(nombre.count("a")))
+    print("codigo secreto: " + str(nombre[::-1].upper()))
+    print("Nota 1: " + str(nota))
+    print("Nota 2: " + str(nota2))
+    print("Nota 3: " + str(nota3))
+    print("Suma: " + str(nota + nota2 + nota3))
+    print("Promedio: " + str(nota + nota2 + nota3 /3))
+    print("Promedio entero: " + str(round(nota + nota2 + nota3 /3)))
+    cierre = "=" * 24
+    print(cierre)
