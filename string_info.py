@@ -14,4 +14,3 @@ def string_info():
     print("Repetida: " + str(repetida))
     decorada = ("***" + str(palabra) + "***")
     print("Decorada: " + str(decorada))
-string_info()

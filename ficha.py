@@ -55,4 +55,3 @@ def ficha():
     print("Promedio entero: " + str(round((nota + nota2 + nota3) /3)))
     cierre = "=" * 24
     print(cierre)
-ficha()
